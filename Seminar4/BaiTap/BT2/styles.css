@@ -1,0 +1,44 @@
+a{
+	color: black;
+	font-family: tahoma;
+	font-size: 15;
+	text-decoration: none;
+}
+.list ul li a{
+	background: url("images/dot.png") left no-repeat ;
+	color: purple; 
+	font-size: 13;
+	font-family: tahoma;
+
+}
+.list{
+	margin-top:20px; 
+	background: white;
+	width: 305px;
+	height: 100px;
+	/* border-bottom-right-radius:10px 10px;
+	border: #f8f1f7 solid 2px; */
+}
+.content{
+	background: #f8f1f7;
+	width: 305px;
+	height: 480px;
+
+/* padding-left:  7px ;
+padding-top: 10px;
+
+border: #f8f1f7 solid 2px;
+} */
+}
+.link{
+	margin-bottom:20px;
+}
+.ha{
+	width: 305px;
+	height: 580px;
+	padding-left:  7px ;
+	padding-top: 10px;
+	border: #e7dbd5 solid 2px;
+	margin-left: 13px;
+	border-bottom-right-radius:10px 10px;
+}

@@ -1,0 +1,8 @@
+1. SELECT gv.ID_GiangVien, gv.TenGiangVien, l.ID_Lop, l.TenLop, l.KyHieu FROM giangvien AS gv INNER JOIN lop AS l ON gv.ID_Lop=l.ID_Lop
+2. SELECT gv.ID_GiangVien, gv.TenGiangVien, l.ID_Lop, l.TenLop, l.KyHieu FROM giangvien AS gv INNEr JOIN lop AS l on gv.ID_Lop=l.ID_Lop WHERE ID_GiangVien=2
+3. SELECT gv.ID_GiangVien, gv.TenGiangVien, l.ID_lop, l.TenLop, l.KyHieu FROm giangvien AS gv INNER JOIN lop AS l ON gv.ID_Lop=l.ID_Lop WHERE TenGiangVien ="Phan Hong Huu"
+4. SELECT COUNT FROM giangvien WHERE ID_GiangVien > 3
+5. SELECT TenGiangVien, TenLop FROM giangvien WHERE ID_GiangVien=4
+6. SELECT gv.TenGiangVien, l.TenLop FROm giangvien AS gv INNER JOIN lop AS l ON gv.ID_Lop=l.ID_Lop WHERE ID_GiangVien >1
+7. SELECT ID_GiangVien, TenGiangVien FROM giangvien LIMIT 2,3
+8. SELECT gv.TenGiangVien, gv.ID_GiangVien, l.ID_Lop, l.TenLop FROM giangvien AS gv INNER JOIN lop AS l ON gv.ID_Lop=l.ID_Lop WHERE ID_GiangVien >=2  ORDER BY ID_GiangVien DESC LIMIT 3

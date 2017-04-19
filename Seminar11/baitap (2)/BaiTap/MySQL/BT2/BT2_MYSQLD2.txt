@@ -1,0 +1,17 @@
+Câu 1: Sửa Tin tức Việt Nhật thành Tin tức Việt - Nhật
+UPDATE danhmuctin SET TenDanhMucTin = "Tin tức Việt - Nhật" WHERE TenDanhMucTin = "Tin tức Việt Nhật"		
+
+ Câu 2: Sửa Toàn cảnh nhật Bản thành Toàn cảnh Nhật Bản
+UPDATE danhmuctin SET TenDanhMucTin = "Toàn cảnh Nhật Bản" WHERE TenDanhMucTin = "Toàn cảnh nhật Bản"			
+
+Câu 3: Liệt kê các TenDanhMucTin
+SELECT TenDanhMucTin FROM danhmuctin 				
+
+Câu 4: Liệt kê ID_DanhMucTin và TenDanhMucTin có ID_DanhMucTin > 4
+SELECT ID_DanhMucTin, TenDanhMucTin FROM danhmuctin WHERE ID_DanhMucTin >4
+
+Câu 5: Liệt kê TenDanhMucTin có chứa từ Nhật
+SELECT TenDanhMucTin FROM danhmuctin WHERE TenDanhMucTin like '%Nhật%'			
+
+Câu 6: Xóa các DanhMucTin có ID_DanhMucTin bằng 5 và 6		
+DELETE FROM danhmuctin WHERE ID_DanhMucTin = 5 OR ID_DanhMucTin =6

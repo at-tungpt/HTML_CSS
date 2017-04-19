@@ -1,0 +1,28 @@
+.content{
+	width: 900px;
+	height:1200px; 
+	background: red;
+	margin: 20px auto;
+}
+.divRight{
+	width: 300px;
+	height: 400px;
+	background: blue;
+	float: right;
+}
+
+.divCenter{
+	width: 300px;
+	height: 400px;
+	background: green;
+	float: left;
+}
+.divLeft{
+	width: 300px;
+	height: 400px;
+	background: yellow;
+	float:left;
+}
+.clear{
+	clear:both;
+}

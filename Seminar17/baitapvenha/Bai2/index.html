@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Form User | VinaEnter Edu</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#samplecode').validate({
+				ignore:[],
+					debug:false,
+				rules: {
+					mail: {
+						required: true,
+						email: true
+					},
+					Password: {
+						required: true,
+						minlength: 6,
+						maxlength: 32
+					},
+					avatar: {
+						required: true,
+					}
+								},
+				messages: {
+					email: {
+						required: "<br/>Vui lòng nhập họ và tên",
+						email: "<br/>Địa chỉ email không đúng định dạng"
+					},
+					Password: {
+						required: "<br/>Vui lòng nhập địa chỉ email",
+						email: "<br/>Địa chỉ email không đúng định dạng"
+					},
+					avatar: {
+						required: "<br/>Vui lòng nhập số lượng",
+					}
+				}
+			});
+
+		});
+	</script>	
+</head>
+<body>
+<?php
+				if(isset($_POST['submit'])){
+					if($_POST['hoten']==""){
+						echo "Người dùng cần nhập họ và tên <br/>";
+					}
+						if($_POST['myEmail']==""){
+						echo "Vui lòng nhập địa chỉ email <br/>";
+				}
+						if($_POST['content']==""){
+						echo "Vui lòng nhập nội dung mô tả <br/>";
+				}
+				if($_POST['myEmail'] == "info@vinaenter.edu.vn" ){
+					header("location: http://vinaenter.edu.vn/");
+				}
+			}
+				?>
+	<!-- login starts here -->
+	<div class="login agile">
+		<div class="w3agile-border">
+			<h2>Login Form | VinaEnter Edu</h2>
+			<div class="login-main login-agileits"> 
+				<h1>Login</h1> 
+				<form action="#" method="post" id="samplecode">
+					<p>Email (*)</p>
+					<input type="text" placeholder="example@gmail.com" name="mail" id="mail">
+					<p>Password (*)</p>
+					<input type="password" placeholder="Password" name="Password" id="Password" >
+					<p>Avatar</p>
+					<input type="file" name="avatar">
+					<input type="submit" value="Login">
+				</form>
+			</div>
+		</div> 
+	</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+* Những chức năng cần có của dự án ANEWS:
++ Lấy dữ liệu từ cơ sở dữ liệu hiển thị lên các trang.
++ Chuyển trang, phân trang
++ Tìm kiếm
++ Khi click vào tiêu đề mỗi trang thì chuyển đến trang chi tiết
++ Hiển thị những tin tức liên quan trong trang chi tiết của tin.
++ Xây dựng Nav-bar và left-bar chứa danh mục tin
++ Xây dựng header và footer

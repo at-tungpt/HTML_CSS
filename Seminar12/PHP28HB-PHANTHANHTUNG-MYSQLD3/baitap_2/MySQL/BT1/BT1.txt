@@ -1,0 +1,26 @@
+Câu 1:	Sửa HinhAnh thành hinh8.jpg của ID_TinTuc là 4				
+UPDATE tintuc SET HinhAnh="hinh8.jpg" WHERE ID_TinTuc = 4
+
+Câu 2:	Cập nhật ChiTiet và NgayDang				
+UPDATE tintuc SET ChiTiet="", NgayDang=""
+
+Câu 3:	Lấy thông tin gồm ID_TinTuc, TenTinTuc, HinhAnh, ID_DanhMucTin của ID_TinTuc = 2				
+SELECT ID_TinTuc, TenTinTuc, HinhAnh, ID_DanhMucTin FROM tintuc WHERE ID_TinTuc = 2
+
+Câu 4:	Hiển thị các tin có ID_DanhMucTin = 1				
+SELECT TenTinTuc FROM tintuc WHERE ID_DanhMucTin = 1 
+
+Câu 5:	Hiển thị các tin có ID_DanhMucTin = 2				
+SELECT TenTinTuc FROM tintuc WHERE ID_DanhMucTin = 1 
+
+Câu 6:	Đếm số lượng tin có ID_DanhMucTin = 1
+SELECT COUNT(*) AS soLuong FROM tintuc WHERE ID_DanhMucTin = 1				
+
+Câu 7:	Đếm số lượng tin có ID_DanhMucTin = 2				
+SELECT COUNT(*) AS soLuong FROM tintuc WHERE ID_DanhMucTin = 2
+
+Câu 8:	Hiển thị thông tin ID_TinTuc, TenTinTuc, ID_DanhMucTin, TenDanhMucTin có ID_TinTuc = 2
+SELECT tt.ID_TinTuc, tt.TenTinTuc, dmt.ID_DanhMucTin, dmt.TenDanhMucTin From tintuc AS tt INNER JOIN danhmuctin AS dmt ON tt.ID_DanhMucTin = dmt.ID_DanhMucTin WHERE tt.ID_TinTuc = 2 		
+
+Câu 9:	Hiển thị TenTinTuc, TenDanhMucTin có ID_TinTuc = 5	
+SELECT tt.TenTinTuc, dmt.TenDanhMucTin FROM tintuc AS tt INNER JOIN danhmuctin AS dmt ON tt.ID_DanhMucTin = dmt.ID_DanhMucTin WHERE ID_TinTuc = 5 		

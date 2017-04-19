@@ -1,0 +1,6 @@
++ MySQLi là viết tắt của MySQL improved được cải thiện từ MySQL đã được phát triển để tận dụng lợi thế của các tính năng mới được tìm thấy trong các hệ thống MySQL phiên bản 4.1.3 và mới hơn. Các MySQLi mở rộng là bao gồm trong PHP5 và các phiên bản sau này
++ Những ưu điểm của MySQLi
+  * Giao diện hướng đối tượng và hướng thủ tục
+  * Tốc độ truy vấn nhanh
+  * Cải tiến khả năng tìm lỗi và khắc phục
+  * Hỗ trợ và nhúng vào server để sử dụng

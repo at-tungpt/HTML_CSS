@@ -1,0 +1,22 @@
+select * from lop where like "PHP-%"
+select * from lop where id=3 or id=4 or id=5
+select colom 2, colom 3, colom 2 from lop
+select * from lop where like "PHP-Lap trinh web a-z"
+select * from lop where like "%HP-Lap trinh web a-z"
+select * from lop where like "%P-Lap trinh web a-z"
+select * from lop where like "%-Lap trinh web a-z"
+select * from lop where like "PHP-%"
+SELECT * FROM LOP LIMIT 2,4 (BAT DAU TU DONG 3 LAY 4 DONG NUA)
+SELECT 
+
+
+INSERT UPDATE DELETE SELECT
+INTO   SET    FROM   FORM
+VALUES  WHERE
+
+JOIN -> ON
+ORDER BY
+GROUP BY
+HAVING
+
+

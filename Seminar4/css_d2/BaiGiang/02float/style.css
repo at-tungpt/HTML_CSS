@@ -1,0 +1,18 @@
+.wrapper {
+    border: 1px solid #000;
+    height: 300px;
+    margin: 20px auto;
+    width: 600px;
+}
+.wrapper .block-left {
+    background: none repeat scroll 0 0 #bbb;
+    border: 1px solid red;
+    height: 120px;
+    width: 200px;
+}
+.wrapper .block-right {
+    background: none repeat scroll 0 0 pink;
+    border: 1px solid red;
+    height: 120px;
+    width: 286px;
+}

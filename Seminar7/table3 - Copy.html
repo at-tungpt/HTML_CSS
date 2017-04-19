@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML D2</title>
+		<style>
+			.error{
+				color: red;
+			}
+		</style>
+		<script src="jquery-3.1.1.min.js"></script>
+		<script src="jquery.validate.min.js" ></script>
+		<script src="ckeditor/ckeditor.js" ></script>
+		<!-- <script>
+		$(document).ready(function() {
+		$(".register").validate(
+			rules:{
+									".ho": {
+										required: true,
+									}, 
+									/*"ten":{
+										required:true,
+										minlength:5
+									},
+									"sdt":{
+										number:true,
+									}*/
+		
+								},
+								messages: {
+									".ho": {
+										required:"<br/>Vui long nhập họ",
+									},
+									/*"ten":{
+										required:"<br/>Vui long nhap ten",
+										minlength:<br/>"Ten toi thieu phai 5 ky tu"
+									},
+									"sdt":{
+										number:"Phone is number",
+									}*/
+								}
+		
+			);
+			});
+			</script> -->
+
+
+	</head>
+	<body>
+		<h1 style="color: red">Đăng ký thành viên</h1>
+		<form action="javascript:void(0)" class="register">
+			<table border =" 1px">
+				<tr>
+					<td td colspan="2">
+						<h3 class="free">Miễn phí và luôn như vậy.</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						
+						<input type="text" value="" name=" ho" placeholder="Nhập họ" class="ho"/>
+					</td>
+					<td>
+						
+						<input type="text" value="" name=" ten" placeholder="Nhập tên" class="ten"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						
+						<input type="text" value="" name="mobile" placeholder="Nhập mobile" class="sdt" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						
+						<input type="text" value="" name="email" placeholder="Nhập Email" class="nhapMail" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						
+						<input type="password" value="" name="mobile" placeholder="Nhập password" class="nhapPass"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label for=""><strong> Ngày sinh </strong> <br/></label>
+						<select name="" id="">
+							<option value="">Ngày</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="3">4</option>
+						</select>
+						<select name="" id="">
+							<option value="">Tháng</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="3">4</option>
+						</select>
+						<select name="" id="">
+							<option value="">Năm</option>
+							<option value="2000">2000</option>
+							<option value="2002">2002</option>
+							<option value="2003">2003</option>
+							<option value="2004">2004</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label for=""> Chọn giới tính: </label>
+						<input type="radio" name="sex" value="nam" >Nam
+						<input type="radio" name="sex" value="nữ" >Nữ
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label for=""> Avatar </label>
+						<input type="file" name="sex" value="avatar" >
+						
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label for=""> Sở thích </label>
+							Game<input type="checkbox" name="Game" value="avatar" >
+							Play Soccer<input type="checkbox" name="Play Soccer" value="avatar" >
+							Go out with my friend<input type="checkbox" name="Go out with my friend" value="avatar" >
+							
+						</tr>
+						<tr>
+							<td colspan="2">
+								<label for=""> Giới thiệu bản thân </label>
+								<textarea class="ckeditor" name="ckeditor" id="" cols="15" rows="10"> Introductions your self</textarea>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<input type="submit" value="Đăng ký" name="dangKy" onclick="getInfo()" />
+									<input type="reset" value="Reset" name="reset"/ >
+									<input type="hidden" value="em_12" name=""/>
+								</tr>
+							</table>
+						</form>
+						<p class=".notification">
+						<script  type="text/javascript" >
+						/*var ho=$('.ho').val();*/
+						var ho=$('.ho').val();
+						var free = $('.free').text();
+						alert(free);
+						function getInfo(){
+						
+						alert('Ho:'+ho);
+						if(ho=="phan")
+							$('.sdt').val('0982999999');
+					}
+						/*var nhapMail =$('.nhapMail').val();
+							var nhapPass =$('.nhapPass').val();
+							if(nhapMail == "abcd" && nhapPass =="12345")
+								alert("Tai khoan da duoc su dung")
+							$('.notification').text('Email nay da ton tai')
+						}*/
+						$(document).ready(function (){
+							$('.register').validate({
+								rules:{
+									ho: {
+										required: true,
+									}, 
+									/*"ten":{
+										required:true,
+										minlength:5
+									},
+									"sdt":{
+										number:true,
+									}*/
+
+								},
+								messages: {
+									ho: {
+										required:"<br/>Vui long nhập họ",
+									},
+									/*"ten":{
+										required:"<br/>Vui long nhap ten",
+										minlength:<br/>"Ten toi thieu phai 5 ky tu"
+									},
+									"sdt":{
+										number:"Phone is number",
+									}*/
+								},
+							});
+						});
+
+						</script>
+						</p>
+					</body>
+					
+				</html>

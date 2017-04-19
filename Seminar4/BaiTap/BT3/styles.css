@@ -1,0 +1,30 @@
+.content{
+	width: 964px;
+	height: 453px;	
+	padding-top: 5px;
+	padding-left:7px;
+}
+a{
+	text-decoration: none;
+	color: black;
+	font-family: tahoma;
+	font-size: 15;
+}
+p{
+	font-size: 13;
+	font-family: tahoma;
+}
+ul li{
+float: left;
+width: 240px;
+}
+img {
+	border: black  solid 1px ;
+	width: 250px;
+	height: 144px;
+
+}
+.news{
+
+width: 210px;
+}

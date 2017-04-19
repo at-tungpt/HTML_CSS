@@ -1,0 +1,247 @@
+<html>
+<head>
+	<title>jQuery Validator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="học php" />
+	<meta name="description" content="học php" />
+	<style>
+			label{
+				color: red;
+				margin-left: 20px;
+				font-size: 15px;
+			}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#frmLogin').validate({
+				ignore:[],
+					debug:false,
+				rules: {
+					username: {
+						required: true,
+						minlength: 6,
+						maxlength:32
+					},
+					password: {
+						required: true,
+						minlength: 6
+					},
+					confirm_password: {
+						required: true,
+						minlength: 6,
+						equalTo: "#password"
+					},
+					fullname:{
+						required: true,
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					confirm_email:{
+						required: true,
+						equalTo: "#email"
+					},
+					skype:{
+						required: true
+					},
+					gioitinh:{
+						required:true
+					},
+					thanhpho:{
+						required:true
+					},
+					gioithieu:{
+						required: function() {CKEDITOR.instances.idgioithieu.updateElement();},
+						maxlength:200,
+						},
+				},
+				messages: {
+
+					username: {
+						required: "<br/>Vui lòng nhập tên đăng nhập",
+						minlength: "<br/>Tên đăng nhập tối thiểu 6 ký tự",
+						maxlength: "<br/>Tên đăng nhập tối đa 32 ký tự"
+					},
+					password: {
+						required: "<br/>Vui lòng nhập mật khẩu",
+						minlength: "<br/>Tối thiểu 6 ký tự"
+					},
+					confirm_password: {
+						required: "<br/>Vui lòng nhập lại mật khẩu",
+						minlength: "<br/>Mật khẩu tối thiểu 6 ký tự",
+						equalTo: "<br/>Mật khẩu phải trùng với mật khẩu ở trên"
+					},
+					email:{
+						required:"<br/>Vui lòng nhập ",
+						email: "<br/>Địa chỉ email không đúng định dạng"
+
+					}, 
+					confirm_email:{
+						required:"<br/>Vui lòng nhập ",
+						equalTo: "<br/>Email phải trùng với email ở trên"
+					},
+					fullname:{
+						required:"<br/>Vui lòng nhập họ và tên",
+					}, 
+					skype:{
+						required:"<br/>Vui lòng nhập Nick Skype",	
+					},
+					gioitinh:{
+						required:"<br/>Vui lòng chọn giới tính<br/>"
+					},
+					thanhpho:{
+						required:"<br/>Vui lòng chọn thành phố<br/>"
+
+					},
+					gioithieu:{
+							required:"<br/>Vui lòng nhập giới thiệu thành viên",
+						},		
+				}
+			});
+
+		});
+	</script>
+	
+</head>
+<body>
+	<p>
+		1. Tích hợp CKEditor vào textarea: Giới thiệu thành viên<br />
+		2. Dùng jQuery Validator, kiểm tra tính hợp lệ dữ liệu người dùng nhập vào form theo yêu cầu sau:</p>			
+		<p style="size:90%; font-style:italic">(*) Bắt buộc nhập</p>
+		<form action="javascript:void(0)" method="POST" id="frmLogin">
+			<table width="800px" border="1">
+				<tr><td colspan="2"><p style="color:#E97D13; text-align:center">VinaTAB EDU - Đã học là làm được</p></td></tr>
+				<tr><td colspan="2"><p style="color:#E97D13"><b>Đăng ký thành viên, gian hàng</b></p></td></tr>
+				<tr>
+					<td width="152px" valign="top">Tên truy cập(*): </td>
+					<td valign="top">
+						<input type="text" value="" name="username" size="32" /><br />
+						<!-- - Tên truy cập phải có ít nhất 6 ký tự, nhiều nhất 32 ký tự. -->
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Mật khẩu(*): </td>
+					<td valign="top">
+						<input type="password" value="" name="password" size="32" /><br />
+						<!-- - Mật khẩu phải có ít nhất 6 ký tự. -->
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Xác nhận mật khẩu(*): </td>
+					<td valign="top">
+						<input type="password" value="" name="confirm_password" size="44" id="repassword"/><br />
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Họ và tên(*): </td>
+					<td valign="top">
+						<input type="text" value="" name="fullname" size="44" id="fullname"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Email(*): </td>
+					<td valign="top">
+						<input type="text" value="" name="email" size="44" id="email"/><br />
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Xác nhận email: </td>
+					<td valign="top">
+						<input type="text" value="" name="confirm_email" size="44" id="confirm_email" /><br />
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="middle">Avatar/logo: </td>
+					<td valign="top">
+						<input type="file" value="" name="avatar" size="44" />
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Giới tính(*): </td>
+					<td valign="top">
+						Nam <input type="radio" value="nam" name="gioitinh" />
+						Nữ <input type="radio" value="nu" name="gioitinh" /><br />						
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Ngày sinh: </td>
+					<td valign="top">
+						<select name="ngay">
+							<option value="0">Ngày</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="31">31</option>
+						</select> -
+						<select name="thang">
+							<option value="0">Tháng</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="12">12</option>
+						</select> -
+						<select name="nam">
+							<option value="0">Năm</option>
+							<option value="1">2013</option>
+							<option value="2">2014</option>
+							<option value="12">2015</option>
+							<option value="12">2016</option>
+						</select> (dd-mm-yyyy)
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Thành phố(*): </td>
+					<td valign="top">
+						<select name="thanhpho" id="myCheckbox" >
+							<option value="">--[Chọn]--</option>
+							<option value="danang">Đà Nẵng</option>
+							<option value="hochiminh">Hồ Chí Minh</option>
+							<option value="hanoi">Hà Nội</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Nick Yahoo: </td>
+					<td valign="top">
+						<input type="text" value="" name="yahoo" />
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Nick Skype(*): </td>
+					<td valign="top">
+						<input type="text" value="" name="skype" />
+					</td>
+				</tr>
+				
+					<tr>
+					<td valign="top">Giới thiệu thành viên(*)</td>
+					<td valign="top">
+						<textarea id="idgioithieu" class="ckeditor" rows="6" cols="80" name="gioithieu"></textarea>
+					</td>
+				</tr>
+				
+				<tr>
+					<td valign="top">&nbsp;</td>
+					<td valign="top">
+						<input type="submit" value="Submit" name="submit" onclick="" />
+						<input type="reset" value="Reset" name="reset" />
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+</body> 
+</html> 

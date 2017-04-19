@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<!--   <script type="text/javascript" src="ckeditor/ckeditor.js"></script -->>
+   
+     <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="jquery-validation/jquery.validate.js"></script>
+<style type="text/css">
+* { font-family: Verdana; font-size: 96%; }
+label { width: 10em; float: left; }
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+p { clear: both; }
+.submit { margin-left: 12em; }
+em { font-weight: bold; padding-right: 1em; vertical-align: top; }
+</style>
+  <script>
+      
+  $(document).ready(function()
+  
+  {
+
+    $("#form1").validate(
+   {
+  rules: {
+    // no quoting necessary
+    title: {
+   required: true
+      },
+    // dots need quoting, too!
+   description:  {
+       required: true
+   }
+  }
+  
+});
+  });
+  
+  
+  </script>
+        
+        
+    </head>
+    <body>
+        
+        <form name="form1" id="form1" action ="javascript:void(0)">
+            <div>TITLE <input type="text" name="title" id="title" value="" style="width: 325px; font-family: Verdana" /></div>
+            
+            
+            
+        <div> DESCRIPTION <textarea name ="description" id ="description" label="Description"></textarea>
+<script type="text/javascript">
+
+CKEDITOR.replace( 'description');
+
+</script>
+</div>
+            <input name="submit" id="submit" type="submit" value=" Submit" class="buttons" accesskey="s" style="font-size:15px" />
+        </form>
+    </body>
+</html>

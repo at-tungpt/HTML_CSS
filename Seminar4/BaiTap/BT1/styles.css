@@ -1,0 +1,19 @@
+a{
+	color: white;
+	text-decoration: none;
+
+
+}
+.content{
+	font-family: tahoma;
+	font-size:13;
+	background:#803972; 
+	width: 190px;
+	height: 560px;
+	padding-top: 10px;
+	padding-left:  10px ;
+	text-align: left;	
+}
+.contentA{
+	margin-bottom: 20px;
+}

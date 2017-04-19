@@ -1,0 +1,43 @@
+h1{
+	color: blue;
+	font-family: tahoma;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: normal;
+}
+.ynghia{
+	border: 3px solid red;
+	width:500px;
+	height:250px;	
+	/*background-color: green;*/
+	background:url('images/doremon.jpg') no-repeat left top;
+	
+	margin-top: 40px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	
+	padding-top: 30px;
+	padding-right: 100px;
+}
+.ynghia p{
+	color:red;	
+	line-height:30px;
+	text-align: right;
+}
+.ynghia p a{
+	text-decoration:none;
+	text-shadow: 1px 1px #BBB;
+	text-transform: uppercase;
+}
+.baihoc-first ul{
+	list-style:square;
+	list-style-position:inside;
+}
+.baihoc ul li {
+  background: url("images/location.png") no-repeat scroll left center;
+}
+.quan-coro p{font-weight:bold;}
+
+
+
+

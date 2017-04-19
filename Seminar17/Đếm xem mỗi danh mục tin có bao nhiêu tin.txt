@@ -1,0 +1,20 @@
+1.Đếm xem mỗi danh mục tin có bao nhiêu tin
+
+SELECT danhmuctin.TenDanhMucTin count(*) AS soluong FROM tintuc INNER JOIN danhmuctin ON danhmuctin.ID_danhmuctin = tintuc.ID_danhmuctin GROUP BY danhmuctin.TenDanhMuc
+
+2.Liệt kê TenDanhMucTin không có bài đăng.
+
+SELECT TenDanhMuc FROM danhmuctin WHERE ID_danhmuctin NOT IN (
+   SELECT danhmuctin.ID_danhmuctin FROM tintuc INNER JOIN danhmuctin ON tintuc.ID_danhmuctin = danhmuctin.ID_danhmuctin)
+)
+
+3.Hiển thị 3 TenDanhMucTin có số tin nhiều nhất
+SELECT danhmuctin.TenDanhMucTin count()AS soluong FROM tintuc INNER JOIN danhmuctin ON danhmuctin.ID_danhmuctin = tintuc.ID_danhmuctin GROUP BY danhmuctin.TenDanhMuc limit 3
+
+4.Thiết lập quan hệ sao cho khi xóa 1 DanhMucTin thì tất cả tin thuộc danh mục đó cũng bị xóa theo
+
+
+
+5.Liệt kê những tin đăng trong tháng 12.
+SELECT TenTinTuc, TenDanhMucTin, Ngaydang tintuc INNER JOIN ID_danhmuctin ON tintuc.ID_danhmuctin  =danhmuctin.ID_danhmuctin 
+WHERE month(Ngaydang) = 12

@@ -1,0 +1,35 @@
+Câu 1:	Tạo table hoa và thực hiện chèn dữ liệu vào bảng hoa như trên
+INSERT INTO hoa(ten_hoa, mo_ta, hinh_anh, gia_ban, id_cat) VALUES("Hoa thủy tiên", "Mô tả Hoa thủy tiên", "thuytien.jpg", "120000", "2"), ("Hoa Violet", "Mô tả Hoa Violet", "violet.jpg", "140000", "1"), ("Hoa Lilies", "Mô tả Hoa Lilies", "hoali.jpg", "200000", "1"), ("Hoa lài", "Mô tả Hoa lài", "hoalai.jpg", "400000", "3"), ("Hoa Phong Lan", "Mô tả Hoa Phong Lan", "phonglam.jpg", "135000", "4"), ("Hoa cúc", "Mô tả Hoa cúc", "cuc.png", "100000", "1"), ("Hoa Tỉ muội", "Mô tả Hoa Tỉ muội", "timuoi.gif", "80000", "1"), ("Hoa Hồng Phấn", "Mô tả Hoa hồng Phấn", "hongphan.png", "937000", "2"), ("Hoa hồng kem", "Mô tả Hoa hồng kem", "hongkem.gif", "200000", "4"), ("Hoa bát tiên", "Mô tả Hoa bát tiên", "battien.png", "120000", "6")				
+
+Câu 2:	Liệt kê tất cả các hoa có trong table hoa gồm các thông tin: id_hoa, ten_hoa, gia_ban
+SELECT id_hoa, ten_hoa, gia_ban FROM hoa		
+
+Câu 3:	Hiển thị tất cả các hoa gồm các thông tin: id_hoa, ten_hoa, id_cat, ten_cat				
+SELECT h.id_hoa, h.ten_hoa, h.id_cat, lh.ten_cat FROM hoa AS h INNER JOIN loai_hoa AS lh ON h.id_cat = lh.id_cat 
+
+Câu 4:	Hoa thuỷ tiên có ten_cat là gì?				
+SELECT lh.ten_cat FROM hoa AS h INNER JOIN loai_hoa AS lh ON h.id_cat = lh.id_cat WHERE ten_hoa="Hoa thủy tiên" 
+
+Câu 5:	Hiển thị các hoa có id_cat = 1 gồm các thông tin: id_hoa, ten_hoa, id_cat, ten_cat				
+SELECT h.id_hoa, h.ten_hoa, h.id_cat, lh.ten_cat FROM hoa AS h INNER JOIN loai_hoa AS lh ON h.id_cat = lh.id_cat WHERE lh.id_cat = 1    
+
+Câu 6:	Hiển thị các hoa có id_cat = 2 hoặc id_cat = 3 gồm các thông tin: id_hoa, ten_hoa, ten_cat		SELECT h.id_hoa, h.ten_hoa, lh.ten_cat FROM hoa AS h INNER JOIN loai_hoa AS lh ON h.id_cat = lh.id_cat WHERE lh.id_cat = 2 OR lh.id_cat = 3   
+
+
+Câu 7: 	Hiển thị ten_hoa, hinh_anh, gia_ban, ten_cat có id_hoa = 3				
+SELECT h.ten_hoa, h.hinh_anh, h.gia_ban, lh.ten_cat FROM hoa AS h INNER JOIN loai_hoa AS lh ON h.id_cat = lh.id_cat WHERE h.id_hoa = 3
+
+Câu 8:	Tìm các hoa có chứa từ "hồng" gồm các thông tin: id_hoa, ten_hoa, id_cat, ten_cat				
+SELECT h.id_hoa, h.ten_hoa, lh.id_cat, lh.ten_cat FROM hoa AS h INNER JOIN loai_hoa AS lh ON h.id_cat = lh.id_cat WHERE h.ten_hoa LIKE "% hồng %" 
+
+Câu 9:	Sửa thông tin: hinh_anh thành battien.png và mo_ta thành "Đây là mô tả về hoa bát tiên" của id_hoa = 10				
+UPDATE hoa SET hinh_anh="battien.png", mo_ta="Đây là mô tả về hoa bát tiên" WHERE id_hoa = 10
+
+Câu 10:	Sửa id_cat thành 5, gia_ban thành 500000 của hoa có id_hoa = 10 hoặc id_hoa = 8				
+UPDATE hoa SET id_cat = 5, gia_ban=500000 WHERE id_hoa = 10 OR id_hoa = 8 
+
+Câu 11:	Xoá hoa có id_hoa >=9 và gia_ban >150000				
+DELETE FROM hoa WHERE id_hoa >=9 AND gia_ban >150000 
+
+Câu 12:	Có bao nhiêu hoa có id_cat = 1
+SELECT COUNT(*) AS soLuong FROM hoa WHERE id_cat =1 				

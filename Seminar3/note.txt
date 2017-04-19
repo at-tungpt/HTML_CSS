@@ -1,0 +1,12 @@
+note:
+- margin tạo khoảng cách gĩưa 2 thẻ html ko có quan hệ gì với nhau
+- Khi margin thì tuy thuộc vào loại mảgin mà html thay đổi tương ứng
++ panding dùng để tẠo khảong cách gĩưa thẻ cha và con trong html
++ panding chỉ đưọc viêt ở thẻ cha
++ panding khi dùng pading thẻ cha sẽ thay đổi kích thước để tạo kc với thẻ con
+
+bt
+
+line heihg
+tieu the a ko co gach duoi, co the h 
+wed thi dung ul li, do kich thuoc

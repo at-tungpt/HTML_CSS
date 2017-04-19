@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EXERCISE 3</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="left">
+				<div class="header">
+					<p class="title">
+					</p>
+				</div>
+				<h2><a href="">XÃ HỘI</a></h2>
+				<a href=""><img src="images/h1.jpg" alt="pic_1"></a>
+				<h3><a href="">Sẽ xét xử lưu động bảo mẫu đày đọa trẻ mầm non</a></h3>
+				<ul>
+					<li>
+						<a href="">Miền Bắc nắng hanh và duy trì rét đậm</a>
+					</li>
+					<li>
+						<a href="">Cảnh hành hạ trẻ em tàn độc tại trường mầm non tư thục Phương Anh</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="header">
+					<p class="title">
+					</p>
+				</div>
+				<h2><a href="">KINH DOANH</a></h2>
+				<img src="images/h2.jpg" alt="pic_2">
+				<h3><a href="">Tỷ phú Phạm Nhật Vượng kiếm thêm gần nghìn tỷ chỉ trong vòng 1 ngày</a></h3>
+				<ul>
+					<li>
+						<a href="">3G đòi tăng gía: Sẽ tới lúc các nhà mạng phải điều chỉnh</a>
+					</li>
+					<li>
+						<a href="">Đại sứ Thụy Sĩ: Việt Nam có thể phát triển như Thụy Sỹ nếu...</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="content">
+			<div class="left">
+				<div class="header">
+					<p class="title">
+					</p>
+				</div>
+				<h2><a href="">QUÂN SƯ</a></h2>
+				<a href=""><img src="images/h3.jpg" alt="pic_3"></a>
+				<h3><a href="">Vụ bảo mẫu tàn ác: Chết thay con nhưng không sống cùng con!</a></h3>
+				<ul>
+					<li>
+						<a href="">Chùm ảnh Hà Nội bừng ấm áp sau dợt dài mưa rét</a>
+					</li>
+					<li>
+						<a href="">Các bà mẹ bị bảo mẫu "ác thú lừa ra sao"</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="header">
+					<p class="title">
+					</p>
+				</div>
+				<h2><a href="">KINH DOANH</a></h2>
+				<img src="images/h2.jpg" alt="pic_2">
+				<h3><a href="">Tỷ phú Phạm Nhật Vượng kiếm thêm gần nghìn tỷ chỉ trong vòng 1 ngày</a></h3>
+				<ul>
+					<li>
+						<a href="">3G đòi tăng gía: Sẽ tới lúc các nhà mạng phải điều chỉnh</a>
+					</li>
+					<li>
+						<a href="">Đại sứ Thụy Sĩ: Việt Nam có thể phát triển như Thụy Sỹ nếu...</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="content">
+			<div class="left">
+				<div class="header">
+					<p class="title">
+					</p>
+				</div>
+				<h2><a href="">XÃ HỘI</a></h2>
+				<a href=""><img src="images/h1.jpg" alt="pic_1"></a>
+				<h3><a href="">Sẽ xét xử lưu động bảo mẫu đày đọa trẻ mầm non</a></h3>
+				<ul>
+					<li>
+						<a href="">Miền Bắc nắng hanh và duy trì rét đậm</a>
+					</li>
+					<li>
+						<a href="">Cảnh hành hạ trẻ em tàn độc tại trường mầm non tư thục Phương Anh</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="header">
+					<p class="title">
+					</p>
+				</div>
+				<h2><a href="">KINH DOANH</a></h2>
+				<img src="images/h2.jpg" alt="pic_2">
+				<h3><a href="">Tỷ phú Phạm Nhật Vượng kiếm thêm gần nghìn tỷ chỉ trong vòng 1 ngày</a></h3>
+				<ul>
+					<li>
+						<a href="">3G đòi tăng gía: Sẽ tới lúc các nhà mạng phải điều chỉnh</a>
+					</li>
+					<li>
+						<a href="">Đại sứ Thụy Sĩ: Việt Nam có thể phát triển như Thụy Sỹ nếu...</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+	</div>
+</body>
+</html>
